@@ -1,4 +1,3 @@
-var dzielna,dzielnik = 31;
 
 function losujCalaLiczbe(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -7,7 +6,9 @@ function losujCalaLiczbe(min, max) {
 
 
 function losuj() {
- 
+dzielna = 31;
+dzielnik = 32;
+
  while (dzielna*dzielnik > 30 ) {
   dzielna = losujCalaLiczbe(1,9);
   dzielnik = losujCalaLiczbe(1,9);
@@ -18,5 +19,13 @@ function losuj() {
 
 function sprawdz () {
 
- if  ( document.getElementById("wynik").innerHTML = dzielna * dzielnik) { document.getElementById("h1").innerHTML = 'hurra';}
+wynik = document.getElementById('wynik').value;
+dzielna = document.getElementById('dzielna').innerHTML;
+dzielnik = document.getElementById('dzielnik').innerHTML;
+
+ if  ( wynik == (dzielna * dzielnik)) { document.getElementById("h1").innerHTML = 'hurra'}
+ else  {document.getElementById("h1").innerHTML = 'zle!';}
+ console.log(wynik);
+  console.log(dzielna);
+   console.log(dzielnik);
 }

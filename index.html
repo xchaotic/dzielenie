@@ -3,14 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>Dzielenie</title>
-        <script src="js/dzielenie.js"/>
+        <script src="js/dzielenie.js"></script>
     </head>
-    <body onload="testuj">
+    <body onload="losuj()">
         <h1 id="h1">Czekam!</h1>
-        <label id="dzielna">0</label>
-        <label id="dzielnik">0</label>
+        <div id="rownanie" style="font-size:large">
+        <label id="dzielna">0</label> <span> × </span>
+        <label id="dzielnik">0</label> <span> = </span>
         <input type="text" id="wynik"/>
+        </div>    
         <br/>
-        <button onclick="losuj">Sprawdz!</button>
+        <button onclick="sprawdz()">Sprawdz!</button>
     </body>
 </html>
